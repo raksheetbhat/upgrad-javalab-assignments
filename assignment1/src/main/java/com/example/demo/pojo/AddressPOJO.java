@@ -1,5 +1,5 @@
 
-package com.example.demo.request;
+package com.example.demo.pojo;
 
 import java.io.Serializable;
 
@@ -11,35 +11,21 @@ import lombok.Setter;
 import lombok.ToString;
 
 @ToString
+@Setter
+@Getter
 @AllArgsConstructor
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-public class Address implements Serializable {
+public class AddressPOJO implements Serializable {
 
     
 	private static final long serialVersionUID = 579376556347145260L;
 	
-	@Setter
-    @Getter
+	
 	private String addressType;
-	
-	@Setter
-    @Getter
     private String line1;
-	
-	@Setter
-    @Getter
     private String line2;
-	
-	@Setter
-    @Getter
     private String city;
-	
-	@Setter
-    @Getter
     private String state;
-	
-	@Setter
-    @Getter
     private String country;
 
 }

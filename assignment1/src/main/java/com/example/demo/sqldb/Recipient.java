@@ -1,7 +1,8 @@
 
-package com.example.demo.request;
+package com.example.demo.sqldb;
 
 import java.io.Serializable;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
@@ -12,17 +13,14 @@ import lombok.ToString;
 
 @ToString
 @AllArgsConstructor
+@Getter
+@Setter
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-public class Product implements Serializable {
+public class Recipient implements Serializable {
 
-	private static final long serialVersionUID = 490038513927066972L;
+	private static final long serialVersionUID = -6332415425170863718L;
 	
-	@Getter
-	@Setter
-	private String name;
-	
-	@Getter
-	@Setter
-    private Integer price;
+	private BasicProfile basicProfile;
+    private List<Address> addresses = null;
 
 }
